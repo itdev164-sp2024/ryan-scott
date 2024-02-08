@@ -22,6 +22,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     {
+      resolve:'gatsby-source-conentful',
+      options:{
+        spaceId: 'elmagomp499l',
+        accessToken:'kxYhbcvkHw8NO-fuvA-lw1lVN5CsruHX06Q2rgnKcuU'
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
