@@ -24,8 +24,8 @@ module.exports = {
     {
       resolve:'gatsby-source-conentful',
       options:{
-        spaceId: 'elmagomp499l',
-        accessToken:'kxYhbcvkHw8NO-fuvA-lw1lVN5CsruHX06Q2rgnKcuU'
+        spaceId: '${process.env.SPACE_ID}',
+        accessToken:'${process.env.ACCESS_TOKEN}'
       }
     },
     {
