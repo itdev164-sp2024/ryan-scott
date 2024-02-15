@@ -6,9 +6,13 @@ import { graphql } from 'gatsby'
 
 const BlogPost = ({ data }) => {
      const {title} = data.contentfulBlogPost;
+
+
+
     return (
         <Layout>
             <h1>{title}</h1>
+            <div dangerouslySetInnerHTML={{__html: bodyParser.childMarkdownRemark.html}}></div>
         </Layout>
     )
 }
@@ -20,6 +24,11 @@ export const pageQuery = graphql`
         contentfulBlogPost (slug: {eq: $slug}) {
         title
          slug
+         body{
+            childMardownRemark{
+                html
+            }
+         }
         }
     }
     `
