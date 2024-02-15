@@ -24,8 +24,8 @@ module.exports = {
     {
       resolve:'gatsby-source-conentful',
       options:{
-        spaceId: 'elmagomp499l',
-        accessToken:'kxYhbcvkHw8NO-fuvA-lw1lVN5CsruHX06Q2rgnKcuU'
+        spaceId: '${process.env.SPACE_ID}',
+        accessToken:'${process.env.ACCESS_TOKEN}'
       }
     },
     {
@@ -35,6 +35,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
