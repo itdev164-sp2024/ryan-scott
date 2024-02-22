@@ -5,6 +5,8 @@ import PropTypes from "prop-types"
 
 import Header from "./header"
 import "./layout.css"
+import {Gray} from "./themes/Gray"
+import { ThemeProvider } from "styled-components"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -30,7 +32,7 @@ padding: var(--size-gutter);
 
 
   return (
-    <>
+    <ThemeProvider theme= {Gray}>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
      <Content>
       <main>{children}</main>
@@ -44,7 +46,7 @@ padding: var(--size-gutter);
         <a href="https://www.gatsbyjs.com"> Gatsby</a>
       </footer>
      </Content>
-    </>
+    </ThemeProvider>
   )
 }
 
