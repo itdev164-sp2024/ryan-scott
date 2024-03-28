@@ -3,7 +3,7 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 
-import Header from "./Header/header"
+import Header from "./components/Header/header.js"
 import "./layout.css"
 import {Gray} from "./themes/Gray"
 import { ThemeProvider } from "styled-components"
