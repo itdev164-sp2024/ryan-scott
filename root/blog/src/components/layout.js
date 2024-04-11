@@ -9,6 +9,9 @@ import {Gray} from "./themes/Gray"
 import { ThemeProvider } from "styled-components"
 import "./layout.css"
 
+import { Main } from "./Main/Main.js"
+import { Footer } from "./Footer/Footer.js"
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

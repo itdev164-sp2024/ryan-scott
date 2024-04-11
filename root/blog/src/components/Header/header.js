@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import PropTypes  from "prop-types"
 import {H1} from "../Heading"
+import { Section } from "../Section"
 
 const StyledHeader = styled.header`
   margin: 0 auto;
