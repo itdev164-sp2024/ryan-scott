@@ -22,9 +22,16 @@ color: ${props => props.theme.header.color};
 
 const Header = ({Sitetitle}) => (
   <StyledHeader>
+    <Section width = {11/12}>
     <StyledLink to="/"> 
-        {Sitetitle}
+    <H1>
+    {Sitetitle}
+    </H1>
     </StyledLink>
+    </Section>
+    <Section width = {1/12}>
+  Search
+    </Section>
   </StyledHeader>
 )
 
