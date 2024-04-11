@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import PropTypes  from "prop-types"
+import {H1} from "../Heading"
 
 const StyledHeader = styled.header`
   margin: 0 auto;
