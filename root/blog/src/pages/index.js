@@ -7,6 +7,8 @@ import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import {List, Listitem} from '../components/List'
 import { graphql } from "graphql"
+import {Box, Card, Heading} from "rebass"
+import * as styles from "../components/index.module.css"
 
 const IndexPage = ({data}) => (
   <Layout>
