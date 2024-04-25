@@ -7,6 +7,8 @@ import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import {List, Listitem} from '../components/List'
 import { graphql } from "graphql"
+import {Box, Card, Heading} from "rebass"
+import * as styles from "../components/index.module.css"
 
 const IndexPage = ({data}) => (
   <Layout>
@@ -60,5 +62,20 @@ export const query = graphql`
     }
   }
 }`
+
+const Grid = styled(Box)`
+  display: grid;
+  margin: 0;
+  --w: 200px;
+  --n: 2;
+  gap: var(--size-gap);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(max(var(--w),100%/(var(--n)+1)+0.1%), 1fr)
+  );
+  margin-bottom: var(--size-gap);
+  margin-top: var(--size-gap);
+
+`
 
 export default IndexPage
