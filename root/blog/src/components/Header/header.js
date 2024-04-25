@@ -1,10 +1,11 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
+import styled, {ThemeConsumer} from "styled-components"
 import PropTypes  from "prop-types"
 import {H1} from "../Heading"
 import { Section } from "../Section"
 import {IconButton} from '../Button'
+import { SearchButton } from "../Button"
 
 const StyledHeader = styled.header`
   margin: 0 auto;
@@ -13,7 +14,7 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   height: 50px;
-  background: ${props => props.theme.header.backgroundColor};
+  background: ${({theme})=> theme.variants.header.primary.backgroundColor};
 `
 const StyledLink = styled(Link)`
 font-size: var(--font-sm);
@@ -23,15 +24,28 @@ color: ${props => props.theme.header.color};
 
 const Header = ({Sitetitle}) => (
   <StyledHeader>
-    <Section width = {11/12}>
-    <StyledLink to="/"> 
-    <H1>
-    {Sitetitle}
-    </H1>
-    </StyledLink>
+    <Section flex>
+     <Section width = {1/12}
+      flex flexDirection ="column" justifyContent="center">
+        <ThemeConsumer>
+          {theme => <Image src={theme.images.mainHeaderImage}/>}
+        </ThemeConsumer>
+     </Section>
+    <Section width = {11/12}
+      flex flexDirection = "column" justifyContent= "center">
+        <Nav>
+          <Title>
+          <StyledLink to="/">  
+          </StyledLink>
+          </Title>
+          <MediaQuery>
+            <StyledLink></StyledLink>
+             <StyledLink></StyledLink>
+             <StyledLink></StyledLink>
+          </MediaQuery>
+          <SearchButton variant = 'contrast'/>
+        </Nav>
     </Section>
-    <Section width = {1/12}>
-      <IconButton icon= {<Search/>}/>
     </Section>
   </StyledHeader>
 )
