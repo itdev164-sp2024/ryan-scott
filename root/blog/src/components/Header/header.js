@@ -4,6 +4,7 @@ import styled from "styled-components"
 import PropTypes  from "prop-types"
 import {H1} from "../Heading"
 import { Section } from "../Section"
+import {IconButton} from '../Button'
 
 const StyledHeader = styled.header`
   margin: 0 auto;
@@ -30,7 +31,7 @@ const Header = ({Sitetitle}) => (
     </StyledLink>
     </Section>
     <Section width = {1/12}>
-  Search
+      <IconButton icon= {<Search/>}/>
     </Section>
   </StyledHeader>
 )

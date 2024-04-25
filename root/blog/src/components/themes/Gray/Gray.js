@@ -1,3 +1,14 @@
+import React from 'react'
+import mainHeaderImage from './images/react.png'
+import {Search} from 'styled-icons/feather'
+
+
+const images = {
+    mainHeaderImage
+}
+const icons = {
+    Search: <Search/>
+}
 
 
 const theme = {
@@ -7,4 +18,4 @@ const theme = {
     }
 }
 
-export {theme as Gray}
+export const Gray = {...theme, variants, image, icons}
